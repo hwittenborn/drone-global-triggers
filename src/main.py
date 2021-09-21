@@ -80,7 +80,7 @@ async def entrypoint(request, response):
 
     if build_event in allowlist:
         print(f"[Info] Request passed validation ({build_link}).")
-        return JSONResponse(status_code=200, content={"hi":"me"})
+        return JSONResponse(status_code=200)
 
     else:
         print(f"[Warning] Request contained invalid build event '{build_event}' ({build_link}).")
